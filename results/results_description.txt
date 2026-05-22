@@ -1,0 +1,6 @@
+This folder will store output figures from the project, including:
+
+- workflow_figure.png
+- rgb_satellite_image.png
+- land_cover_map.png
+- confusion_matrix.png
