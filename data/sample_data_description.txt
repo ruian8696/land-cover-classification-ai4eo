@@ -1,3 +1,9 @@
-This folder is used to describe or store small sample data for the land cover classification project.
+This project does not store raw satellite imagery in this repository.
 
-The main satellite imagery will be obtained from Sentinel-2 using Google Earth Engine or downloaded from Copernicus Data Space.
+Sentinel-2 Surface Reflectance imagery is accessed directly through Google Earth Engine using the collection:
+
+COPERNICUS/S2_SR_HARMONIZED
+
+The study area is Central London, UK. The imagery is filtered by study area, date range, and cloud cover percentage inside the notebook.
+
+Manual training polygons are created directly in the notebook and are not stored as separate shapefiles.
