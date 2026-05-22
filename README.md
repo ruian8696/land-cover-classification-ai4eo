@@ -1,62 +1,54 @@
 # Land Cover Classification Using Sentinel-2 and Random Forest
 
-## Project Overview
+## Project overview
 
-This project focuses on land cover and land use classification using satellite imagery and machine learning. The aim is to classify different land cover types, such as water, vegetation, urban areas, and bare soil, using Sentinel-2 multispectral imagery.
+This project applies an AI for Earth Observation (AI4EO) workflow to classify land cover and land use types in Central London using Sentinel-2 multispectral satellite imagery and a Random Forest machine learning classifier.
 
-## Research Problem
-
-Land cover classification is an important task in Earth observation because it helps monitor environmental change, urban expansion, vegetation distribution, and surface water patterns. In this project, machine learning is applied to satellite imagery to automatically classify different surface types.
-
-## Study Area
-
-The proposed study area is Greater London, UK. London contains a mixture of dense urban areas, parks, rivers, and bare surfaces, making it suitable for land cover classification.
-
-## Data Source
-
-The project will use Sentinel-2 multispectral satellite imagery. The key bands are:
-
-- B2: Blue
-- B3: Green
-- B4: Red
-- B8: Near Infrared
-
-NDVI will also be calculated using:
-
-NDVI = (B8 - B4) / (B8 + B4)
-
-## Methodology
-
-The workflow includes:
-
-1. Accessing Sentinel-2 satellite imagery
-2. Selecting useful spectral bands
-3. Creating or importing training samples
-4. Training a Random Forest classifier
-5. Predicting land cover classes
-6. Producing a classified land cover map
-7. Assessing accuracy using a confusion matrix
-
-## Land Cover Classes
-
-The main classes are:
+The main objective is to distinguish four land cover classes:
 
 - Water
 - Vegetation
 - Urban / built-up area
-- Bare soil
+- Bare / open land
 
-## Repository Structure
+Land cover classification is an important Earth observation application because it helps monitor the spatial distribution of surface materials and land use patterns. In an urban environment such as London, this type of analysis can support environmental monitoring, urban planning, green space assessment, and studies of surface change.
+
+The workflow demonstrates how satellite imagery, spectral indices, manually labelled training samples, and machine learning can be combined to produce a land cover classification map.
+
+---
+
+## Research problem
+
+Urban areas contain a complex mixture of buildings, roads, vegetation, water bodies, gardens, parks, and exposed surfaces. These land cover types can be difficult to classify because many pixels contain mixed materials, especially at Sentinel-2 spatial resolution.
+
+This project addresses the following research question:
+
+**Can Sentinel-2 multispectral imagery and a Random Forest classifier be used to classify major land cover types in Central London?**
+
+The project focuses on demonstrating a complete and reproducible AI4EO classification workflow rather than producing an operational land cover product.
+
+---
+
+## Study area
+
+The study area is **Central London, United Kingdom**.
+
+Central London was selected because it contains a mixture of different land cover types, including:
+
+- The River Thames
+- Dense urban and built-up areas
+- Parks and green spaces
+- Bare or open surfaces
+
+A relatively small study area was used to reduce computational cost and make the workflow easier to run in Google Colab and Google Earth Engine.
+
+---
+
+## Data source
+
+The project uses **Sentinel-2 Surface Reflectance imagery** accessed through **Google Earth Engine**.
+
+The Sentinel-2 image collection used is:
 
 ```text
-land-cover-classification-ai4eo/
-│
-├── README.md
-├── requirements.txt
-├── land_cover_classification.ipynb
-│
-├── data/
-│   └── sample_data_description.txt
-│
-└── results/
-    └── results_description.txt
+COPERNICUS/S2_SR_HARMONIZED
