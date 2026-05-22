@@ -1,0 +1,3 @@
+This folder is used to describe or store small sample data for the land cover classification project.
+
+The main satellite imagery will be obtained from Sentinel-2 using Google Earth Engine or downloaded from Copernicus Data Space.
