@@ -266,6 +266,40 @@ The project produces the following outputs:
 
 ---
 
+## Output figures
+
+### Sentinel-2 RGB image before classification
+
+This image shows the original Sentinel-2 true-colour composite used as the visual reference before classification. It helps compare the original satellite image with the final classified land cover map.
+
+![Sentinel-2 RGB image](results/rgb_satellite_image.png)
+
+### Final land cover classification map
+
+This map shows the Random Forest land cover classification result. The study area is classified into four classes: water, vegetation, urban / built-up area, and bare / open land.
+
+![Land cover classification map](results/land_cover_map.png)
+
+### AI4EO workflow figure
+
+This figure summarises the main workflow used in the project, from Sentinel-2 image access and preprocessing to Random Forest classification and accuracy assessment.
+
+![Workflow figure](results/workflow_figure.png)
+
+### Confusion matrix
+
+The confusion matrix shows how the predicted land cover classes compare with the reference testing samples. It helps identify which classes were classified correctly and which classes were confused with each other.
+
+![Confusion matrix](results/confusion_matrix.png)
+
+### Feature importance
+
+The feature importance plot shows which Sentinel-2 bands and spectral indices contributed most to the Random Forest classifier.
+
+![Feature importance](results/feature_importance.png)
+
+---
+
 ## Results summary
 
 The Random Forest classifier produced a land cover classification map for Central London using Sentinel-2 multispectral satellite imagery.
@@ -280,6 +314,10 @@ Kappa coefficient: 0.31
 ```
 
 These values indicate that the classification result is moderate rather than highly accurate. The result should therefore be interpreted as a demonstration of a complete AI4EO workflow rather than a highly precise operational land cover product.
+
+The confusion matrix suggests that vegetation is the most successfully represented class, but there is confusion between vegetation, urban / built-up surfaces, and bare / open land. This is expected in a dense urban environment because trees, grass, roads, buildings, and dry surfaces often occur close together within the same Sentinel-2 pixels.
+
+The feature importance plot indicates that the Random Forest model used information from several Sentinel-2 bands and spectral indices. Shortwave infrared bands such as B11 and B12 are useful because they help separate dry, built-up, and bare surfaces from vegetation and water.
 
 ---
 
