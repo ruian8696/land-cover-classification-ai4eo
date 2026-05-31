@@ -17,6 +17,18 @@ This project is not intended to produce a perfect operational land cover product
 
 ---
 
+## Notebook
+
+The main notebook for this project is:
+
+[land_cover_classification.ipynb](land_cover_classification.ipynb)
+
+If the notebook preview does not load correctly on GitHub, it can be opened directly in Google Colab using the link below:
+
+[Open notebook in Google Colab](https://colab.research.google.com/github/ruian8696/land-cover-classification-ai4eo/blob/main/land_cover_classification.ipynb)
+
+---
+
 ## Research problem
 
 Urban areas are difficult to classify from satellite images because they contain many different surface materials close together. For example, one small area of Central London may contain buildings, roads, trees, gardens, water, shadows, and exposed ground.
